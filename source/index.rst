@@ -6,15 +6,16 @@
 Welcome to Portal's documentation!
 ==================================
 
+Getting Started
+---------------
+test
+
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :hidden:
+   :caption: Getting Started
+   
+   self
+   user_vrf.rst
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   
