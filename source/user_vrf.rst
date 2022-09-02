@@ -17,7 +17,7 @@ Currently supported chains
 
 Requirements
 ------------
-`Testnet ETH <https://eips.ethereum.org/EIPS/eip-777>`_ - from one of the supported chains above. 
+Testnet ETH - from one of the supported chains above. 
 
 `MetaMask <https://metamask.io/>`_ - to hold PRTL and testnet ETH and to sign off on transactions.
 
@@ -27,7 +27,7 @@ Requirements
 
 What is PRTL?
 -------------
-PRTL is an `ERC777 <https://eips.ethereum.org/EIPS/eip-777>`_ utility token based on `openzeppelin's implementation <https://docs.openzeppelin.com/contracts/4.x/erc777>`_ that is used to request oracle services.
+PRTL is an `ERC777 <https://eips.ethereum.org/EIPS/eip-777>`_ utility token based on `OpenZeppelin's implementation <https://docs.openzeppelin.com/contracts/4.x/erc777>`_ that is used to request oracle services.
 
 
 .. code-block:: javascript
@@ -150,6 +150,7 @@ Interacting with the contract
 Integrating with your own Dapp
 ------------------------------
 use can modify this
+
 .. code-block:: javascript
 
     // This is the user's callback function. Only the specified VRFServiceOIC contract 
