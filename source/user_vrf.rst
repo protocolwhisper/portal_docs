@@ -61,7 +61,7 @@ Getting PRTL
 
 Explore on Remix IDE
 --------------------
-insert a button?
+Give our VRF service a try `on Remix <https://remix.ethereum.org/#url=https://github.com/PortalCompute/portal_docs/blob/main/sample_code/VRFClient.sol>`_
 
 Breaking down the contract
 --------------------------
