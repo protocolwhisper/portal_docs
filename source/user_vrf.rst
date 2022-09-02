@@ -15,22 +15,19 @@ Currently supported chains
 
 
 
-===============
-
-
-
 Requirements
 ------------
-`MetaMask <https://eips.ethereum.org/EIPS/eip-777>`_
+`Testnet ETH <https://eips.ethereum.org/EIPS/eip-777>`_ - from one of the supported chains above. 
 
-`Eth-Remix <https://eips.ethereum.org/EIPS/eip-777>`_
+`MetaMask <https://metamask.io/>`_ - to hold PRTL and testnet ETH and to sign off on transactions.
 
-`Testnet ETH <https://eips.ethereum.org/EIPS/eip-777>`_
+`Remix IDE <https://remix.ethereum.org/>`_ - to edit and deploy a VRFClient contract and easily interface with the testnet.
+
 
 
 What is PRTL?
 -------------
-PRTL is an `ERC777 <https://eips.ethereum.org/EIPS/eip-777>`_ utility token based on `openzeppelin's implementation <https://docs.openzeppelin.com/contracts/4.x/erc777>`_ that is used to request oracle services from nodes. Requesting a VRF
+PRTL is an `ERC777 <https://eips.ethereum.org/EIPS/eip-777>`_ utility token based on `openzeppelin's implementation <https://docs.openzeppelin.com/contracts/4.x/erc777>`_ that is used to request oracle services.
 
 
 .. code-block:: javascript
@@ -47,13 +44,24 @@ PRTL is an `ERC777 <https://eips.ethereum.org/EIPS/eip-777>`_ utility token base
         }
     }
 
+Requesting an oracle service is as simple as sending PRTL an Oracle Interface Contract. To get tamperproof randomness via Portal's Verifiable Randomness Function (VRF) service, PRTL should be sent to the VRFServiceOIC contract. Below are the addresses of the PRTLToken and VRFServiceOIC contracts on our supported chains.
 
+Deployed contract addresses
+---------------------------
+.. csv-table:: Testnet contract addresses
+    :header: "Chain", "PRTLToken", "VRFServiceOIC"
+    :widths: 100, 100, 100
 
-Deployed PRTLToken contract addresses
--------------------------------------
+    "Arbitrum Nitro Goerli Rollup", 0x2BfDD7e69a7D527D000B7A34290e67326E5fb113, 0x6f349f7788Fa254aE99723487D120e2E55409e78 
+
+    "Optimism Goerli", 0x83B4ad3f09087DEF9d8cFe069D56a1e79bB13006, 0x94a00834A8e147B5DA19B9748f1C2AA14488CC05
 
 Getting PRTL
 ------------
+
+Explore on Remix IDE
+--------------------
+insert a button?
 
 Breaking down the contract
 --------------------------
