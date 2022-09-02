@@ -1,13 +1,56 @@
 .. _developer_docs_vrf:
 
 VRF Developer Docs
-=========================
+==================
+
+Currently supported chains
+--------------------------
+.. csv-table:: Testnets
+    :header: "Chain", "RPC Url", "chainId", "Currency", "Explorer", "Faucet"
+    :widths: 100, 100, 100, 100, 100, 100
+
+    "`Arbitrum Nitro Goerli Rollup <https://offchainlabs.com/>`_", "https://goerli-rollup.arbitrum.io/rpc", 421613, GoerliETH, "https://goerli-rollup-explorer.arbitrum.io", "https://goerlifaucet.com/"
+
+    "`Optimism Goerli <https://www.optimism.io/>`_", "https://goerli.optimism.io", 420, "ETH", "https://goerli-optimism.etherscan.io/", "https://optimismfaucet.xyz/"
+
+
+
+===============
+
+
 
 Requirements
 ------------
+`MetaMask <https://eips.ethereum.org/EIPS/eip-777>`_
+
+`Eth-Remix <https://eips.ethereum.org/EIPS/eip-777>`_
+
+`Testnet ETH <https://eips.ethereum.org/EIPS/eip-777>`_
+
 
 What is PRTL?
 -------------
+PRTL is an `ERC777 <https://eips.ethereum.org/EIPS/eip-777>`_ utility token based on `openzeppelin's implementation <https://docs.openzeppelin.com/contracts/4.x/erc777>`_ that is used to request oracle services from nodes. Requesting a VRF
+
+
+.. code-block:: javascript
+
+    pragma solidity ^0.8.0;
+
+    import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.0.0/contracts/token/ERC777/ERC777.sol";
+
+    contract PRTLToken is ERC777 {
+        constructor(uint256 initialSupply, address[] memory defaultOperators)
+            ERC777("Portal Token", "PRTL", defaultOperators)
+        {
+            _mint(msg.sender, initialSupply, "", "");
+        }
+    }
+
+
+
+Deployed PRTLToken contract addresses
+-------------------------------------
 
 Getting PRTL
 ------------
@@ -94,3 +137,25 @@ Interacting with the contract
 -----------------------------
 
 .. image:: ../images/challenge_face.png
+
+
+Integrating with your own Dapp
+------------------------------
+use can modify this
+.. code-block:: javascript
+
+    // This is the user's callback function. Only the specified VRFServiceOIC contract 
+    // can call this function. Any logic to consume the _randomness is implemented here:
+    function fulfillVRF(bytes32 _randomness) internal {
+        // random dice roll between [1,NUM_SIDES]
+        diceRoll = (uint256(_randomness) % NUM_SIDES) + 1;
+
+        // Perform some action using result
+        // - mint nft
+        // - run lottery
+        // - game action
+        // ...  
+
+        // Emit an event to notify a frontend
+        emit DiceRolled(_randomness, diceRoll);
+    }
