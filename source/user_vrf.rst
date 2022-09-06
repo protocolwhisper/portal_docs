@@ -52,7 +52,7 @@ Deployed contract addresses
     :header: "Chain", "PRTLToken", "VRFServiceOIC"
     :widths: 100, 100, 100
 
-    "Arbitrum Nitro Goerli Rollup", 0x2BfDD7e69a7D527D000B7A34290e67326E5fb113, 0x6f349f7788Fa254aE99723487D120e2E55409e78 
+    "Arbitrum Nitro Goerli Rollup", 0x2BfDD7e69a7D527D000B7A34290e67326E5fb113, 0x189d6a0D82b45efEF901Ea26bC384571f60E97f5 
 
     "Optimism Goerli", 0x83B4ad3f09087DEF9d8cFe069D56a1e79bB13006, 0x94a00834A8e147B5DA19B9748f1C2AA14488CC05
 
@@ -88,7 +88,7 @@ Breaking down the contract
         event DiceRolled(bytes32 _randomness, uint256 _diceRoll);
 
         // Hardcoded addresses of the VRFServiceOIC and PRTLToken
-        address VRFServiceOICAddress = 0x6f349f7788Fa254aE99723487D120e2E55409e78;
+        address VRFServiceOICAddress = 0x189d6a0D82b45efEF901Ea26bC384571f60E97f5;
         PRTLToken PRTL = PRTLToken(0x2BfDD7e69a7D527D000B7A34290e67326E5fb113);
 
         constructor() VRFClientBase() {
