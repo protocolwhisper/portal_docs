@@ -19,8 +19,6 @@
 pragma solidity ^0.8.0;
 
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.0.0/contracts/token/ERC777/ERC777.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.0.0/contracts/token/ERC777/IERC777Recipient.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.0.0/contracts/utils/introspection/IERC1820Registry.sol";
 
 contract PRTLToken is ERC777 {
     constructor(uint256 initialSupply, address[] memory defaultOperators)
@@ -29,6 +27,8 @@ contract PRTLToken is ERC777 {
         _mint(msg.sender, initialSupply, "", "");
     }
 }
+
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.0.0/contracts/utils/introspection/IERC1820Registry.sol";
 
 contract VRFClientBase {
     // Reference to the ERC1820 Registry contract available on all chains

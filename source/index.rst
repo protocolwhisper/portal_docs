@@ -8,7 +8,10 @@ Welcome to Portal's documentation!
 
 Getting Started
 ---------------
-test
+
+Coming Soon
+-----------
+
 
 .. toctree::
    :maxdepth: 2
