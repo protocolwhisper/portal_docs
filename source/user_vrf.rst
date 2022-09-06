@@ -58,6 +58,17 @@ Deployed contract addresses
 
 Getting PRTL
 ------------
+You can obtain PRTL through our own hosted faucet, available soon at http://faucet.portalcompute.com. Here, you have the ability to request PRTL via our web application.
+You can also obtain PRTL via our hosted API– just send a POST request to http://faucet.portalcompute.com/request. 
+
+Both the API and web application ask for the following information:
+- Network (currently, the options are `arbitrum-nitro-goerli` and `optimism-goerli`)
+- Amount of PRTL requested (must be less than 100 PRTL per 24 hours)
+- Address to send the PRTL to on the specified network
+- Faucet API key (at this stage, we ask users to reach out to us for this)
+
+There is a daily limitation of 100 PRTL per requester. You will also need a faucet API key from us in order to authenticate your request. For this key, please contact us at support@portalcompute.com.
+
 
 Explore on Remix IDE
 --------------------
