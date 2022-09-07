@@ -151,7 +151,7 @@ The `VRFClient` contract provides a simple dice-rolling application that can eas
         event DiceRolled(bytes32 _randomness, uint256 _diceRoll);
 
         // Hardcoded addresses of the VRFServiceOIC and PRTLToken
-        address VRFServiceOICAddress = 0x6f349f7788Fa254aE99723487D120e2E55409e78;
+        address VRFServiceOICAddress = 0x189d6a0D82b45efEF901Ea26bC384571f60E97f5;
         PRTLToken PRTL = PRTLToken(0x2BfDD7e69a7D527D000B7A34290e67326E5fb113);
 
         constructor() VRFClientBase() {
