@@ -71,14 +71,14 @@ An example API request is as follows:
 ``curl XPOST --network arbtrium-nitro-goerili --address 0x... --key ...``
 
 Breaking down the contract
-==========================
+--------------------------
 
 Explore on Remix IDE
---------------------
+....................
 Give our VRF service a try `on Remix <https://remix.ethereum.org/#url=https://github.com/PortalCompute/portal_docs/blob/main/sample_code/VRFClient.sol>`_. The provided contracts are meant to familiarize developers with using Portal's VRF service and to serve as boilerplate code for integrating the service into new or existing Dapps.
 
 VRFClientBase
--------------
+.............
 .. code-block:: javascript
 
     import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.0.0/contracts/utils/introspection/IERC1820Registry.sol";
@@ -135,7 +135,7 @@ These steps prevent tokens from being locked in contracts with no means to remov
 
 
 VRFClient
----------
+.........
 Getting randomness in a smart contract is difficult because blockchains are deterministic and intuitive sources like the blockhash can be manipulated by miners and validators. Therefore, it is important to use a tamperproof source of randomness when there are economic consequences (e.g., when running lotteries or minting NFTs). 
 
 The ``VRFClient`` contract provides a simple dice-rolling application that can easily be extended depending on the use case. The randomness for the ``diceRoll`` is generated off-chain by a Portal node running a verifiable random function inside of a secure enclave. By default, the verification logic is run off-chain in the enclave after the randomness is produced. Users can optionally verify the randomness on-chain, but this incurs extra gas costs. 
@@ -227,7 +227,7 @@ The main requirements are that the ``VRFClient`` contract holds enough PRTL toke
 
 
 Deploy a VRFClient contract
----------------------------
+...........................
 The following documents how to deploy a ``VRFClient`` contract in the Remix environment.
 
 .. |pre_click_compile| image:: ../images/pre_click_compile.png
@@ -265,7 +265,7 @@ The following documents how to deploy a ``VRFClient`` contract in the Remix envi
     | default value ``0``.", |initial_diceroll|
 
 Send PRTL to the VRFClient contract
------------------------------------
+...................................
 .. |assets| image:: ../images/assets.png
 .. |view_send_prtl| image:: ../images/view_send_prtl.png
 .. |click_send_prtl| image:: ../images/click_send_prtl.png
@@ -285,7 +285,7 @@ In order for the ``VRFClient`` contract to make VRF requests, it needs PRTL. The
     "| Verify the PRTL was sent.", |send_prtl_confirmation|
 
 Interacting with the VRFClient contract
----------------------------------------
+.......................................
 At this point, the ``VRFClient`` contract should be deployed to the desired testnet and is supplied with PRTL tokens. The following documents how to make VRF requests from Remix.
 
 .. |pre_request| image:: ../images/pre_request.png
