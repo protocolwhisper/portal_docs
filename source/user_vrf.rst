@@ -5,7 +5,7 @@ VRF Developer Docs
 
 Currently supported chains
 --------------------------
-.. csv-table:: TestnetVs
+.. csv-table:: Testnets
     :header: "Chain", "RPC Url", "chainId", "Currency", "Explorer", "Faucet"
     :widths: 100, 100, 100, 100, 100, 100
 
