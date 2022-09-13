@@ -81,12 +81,14 @@ contract VRFClient is VRFClientBase {
     uint256 constant NUM_SIDES = 6;
     event DiceRolled(bytes32 _randomness, uint256 _diceRoll);
 
-    // Hardcoded addresses of the VRFServiceOIC and PRTLToken
-    address VRFServiceOICAddress = 0x189d6a0D82b45efEF901Ea26bC384571f60E97f5;
-    PRTLToken PRTL = PRTLToken(0x2BfDD7e69a7D527D000B7A34290e67326E5fb113);
+    // For referencing VRFServiceOIC and PRTLToken contracts
+    address VRFServiceOICAddress; 
+    PRTLToken PRTL;
 
-    constructor() VRFClientBase() {
+    constructor(address _VRFServiceOICAddress, address _PRTLTokenAddress) VRFClientBase() {
         owner = msg.sender;
+        VRFServiceOICAddress = _VRFServiceOICAddress;
+        PRTL = PRTLToken(_PRTLTokenAddress);
     }
 
     // This function makes a VRF request to the VRFServiceOIC contract.
