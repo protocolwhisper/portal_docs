@@ -68,7 +68,12 @@ Both the API requires the following information:
 - ``Faucet API Key``
 
 An example API request is as follows:
-``curl XPOST --network arbtrium-nitro-goerili --address 0x... --key ...``
+
+.. code-block:: 
+
+    curl -X POST "95.217.75.250:8080/request?api_key=abcdefghijklmnopqrstuvwxyz&to_address=0x123456789deadbeef0123456789deadbeef01234&network=arbitrum-nitro-goerli"
+
+This would transfer 100 PRTL to address ``0x123456789deadbeef0123456789deadbeef01234`` on Arbitrum's Nitro Testnet, assuming the API key ``abcdefghijklmnopqrstuvwxyz`` is valid.
 
 Breaking down the contract
 --------------------------
