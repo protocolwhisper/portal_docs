@@ -61,11 +61,12 @@ You can obtain PRTL through Portal's web app `faucet <http://faucet.portalcomput
 
 Both the API requires the following information:
 
-- ``Network`` name (currently, the options are `arbitrum-nitro-goerli` and `optimism-goerli`)
+- ``api_key``: The faucet API key
 
-- ``Address`` to send the PRTL to on the specified network.
+- ``network``: The name of the testnet (currently, the options are `arbitrum-nitro-goerli` and `optimism-goerli`)
 
-- ``Faucet API Key``
+- ``to_address:`` the destination wallet address to send the PRTL to
+
 
 An example API request is as follows:
 
