@@ -51,7 +51,7 @@ Deployed contract addresses
     :header: "Chain", "PRTLToken", "VRFServiceOIC"
     :widths: 100, 100, 100
 
-    "Arbitrum Nitro Goerli Rollup", 0x2BfDD7e69a7D527D000B7A34290e67326E5fb113, 0x189d6a0D82b45efEF901Ea26bC384571f60E97f5 
+    "Arbitrum Nitro Goerli Rollup", 0x2BfDD7e69a7D527D000B7A34290e67326E5fb113, 0x6B11419cB519D5fAcB9B79e2f5b32408dC36996E 
 
     "Optimism Goerli", 0x83B4ad3f09087DEF9d8cFe069D56a1e79bB13006, 0x7c704c43cB9D142579c2392Ae45e1579BcD2431B
 
