@@ -57,24 +57,25 @@ Deployed contract addresses
 
 Getting PRTL
 ------------
-You can obtain PRTL through Portal's web app `faucet <http://faucet.portalcompute.com>`_ or via Portal's API by sending a POST request to http://faucet.portalcompute.com/request. There is a daily limit of 100 PRTL per requester. You will need a faucet API key in order to authenticate your request. For this key, please contact us at support@portalcompute.com.
+You can obtain PRTL through Portal's web app `faucet <http://faucet.portalcompute.com>`_ or via Portal's API by sending a POST request to http://faucet.portalcompute.com/request. Each request gives 100 PRTL. You will need a faucet API key in order to authenticate your request. For this key, please contact us at contact@portalcompute.com.
 
 Both the API requires the following information:
 
-- ``api_key``: The faucet API key
 
 - ``network``: The name of the testnet (currently, the options are `arbitrum-nitro-goerli` and `optimism-goerli`)
 
 - ``to_address:`` the destination wallet address to send the PRTL to
+
+- ``api_key``: The faucet API key
 
 
 An example API request is as follows:
 
 .. code-block:: 
 
-    curl -X POST "95.217.75.250:8080/request?api_key=abcdefghijklmnopqrstuvwxyz&to_address=0x123456789deadbeef0123456789deadbeef01234&network=arbitrum-nitro-goerli"
+    curl -X POST "95.217.75.250:8080/request?api_key=YOUR_API_KEY&to_address=0x123456789deadbeef0123456789deadbeef01234&network=arbitrum-nitro-goerli"
 
-This would transfer 100 PRTL to address ``0x123456789deadbeef0123456789deadbeef01234`` on Arbitrum's Nitro Testnet, assuming the API key ``abcdefghijklmnopqrstuvwxyz`` is valid.
+This would transfer 100 PRTL to address ``0x123456789deadbeef0123456789deadbeef01234`` on Arbitrum's Nitro Testnet, assuming the API key is valid.
 
 Breaking down the contract
 --------------------------
