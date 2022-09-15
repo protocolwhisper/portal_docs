@@ -57,7 +57,12 @@ Deployed contract addresses
 
 Getting PRTL
 ------------
-You can obtain PRTL through Portal's web app `faucet <http://faucet.portalcompute.com>`_ or via Portal's API by sending a POST request to http://faucet.portalcompute.com/request. Each request gives 100 PRTL. You will need a faucet API key in order to authenticate your request. For this key, please contact us at contact@portalcompute.com.
+You can obtain PRTL via two methods:
+
+1. Using Portal's web app `faucet <http://faucet.portalcompute.com>` 
+.. |faucet-site| image:: ../images/faucet-site.png 
+
+2. Using Portal's API by sending a POST request to http://faucet.portalcompute.com/request. Each request gives 100 PRTL. You will need a faucet API key in order to authenticate your request. For this key, please contact us at contact@portalcompute.com.
 
 Both the API requires the following information:
 
