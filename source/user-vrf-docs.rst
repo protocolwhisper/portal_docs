@@ -57,15 +57,15 @@ Deployed contract addresses
 
 Getting PRTL
 ------------
-You can obtain PRTL via two methods:
+You can obtain PRTL using one of the following methods:
 
-1. Using Portal's web app `faucet <http://faucet.portalcompute.com>` 
-.. |faucet-site| image:: ../images/faucet-site.png 
+1. Using Portal's web app faucet, located at http://faucet.portalcompute.com.
 
-2. Using Portal's API by sending a POST request to http://faucet.portalcompute.com/request. Each request gives 100 PRTL. You will need a faucet API key in order to authenticate your request. For this key, please contact us at contact@portalcompute.com.
+.. image:: ../images/faucet-site.png
 
-Both the API requires the following information:
+2. Using Portal's API by sending a POST request to http://faucet.portalcompute.com/request. Each request sends 100 PRTL to the requester's address. You will need a faucet API key in order to authenticate your faucet request. For this key, please contact us at contact@portalcompute.com.
 
+Both methods require the following information:
 
 - ``network``: The name of the testnet (currently, the options are `arbitrum-nitro-goerli` and `optimism-goerli`)
 
@@ -78,9 +78,27 @@ An example API request is as follows:
 
 .. code-block:: 
 
-    curl -X POST "95.217.75.250:8080/request?api_key=YOUR_API_KEY&to_address=0x123456789deadbeef0123456789deadbeef01234&network=arbitrum-nitro-goerli"
+    curl -X POST "95.217.75.250:8080/request?api_key=abcdefg1234567&to_address=0x123456789deadbeef0123456789deadbeef01234&network=arbitrum-nitro-goerli"
 
-This would transfer 100 PRTL to address ``0x123456789deadbeef0123456789deadbeef01234`` on Arbitrum's Nitro Testnet, assuming the API key is valid.
+This would transfer 100 PRTL to address ``0x123456789deadbeef0123456789deadbeef01234`` on Arbitrum's Nitro Testnet, using the API key `abcdefg1234567`.
+
+Once the PRTL is sent, you can use a blockchain explorer to confirm that you recieved the token. 
+- Arbitrum: https://goerli-rollup-explorer.arbitrum.io
+- Optimism: https://goerli-optimism.etherscan.io/
+
+In order to view these PRTL tokens, you'll need to import the PRTL token into MetaMask.
+.. |import-optimism-1| image:: ../images/import-optimism-1.png
+.. |import-optimism-2| image:: ../images/import-optimism-2.png
+.. |import-optimism-3| image:: ../images/import-optimism-3.png
+
+.. csv-table::  
+    :width: 100%
+
+    "| Navigate to MetaMask and locate the 'Import token' button
+    | on the buttom of the UI.", |import-optimism-1|
+    "| Enter the correct valices for each of the fields using . 
+    | the above information for the Token Contract Address.", |import-optimism-2|
+    "| Complete the import by clicking 'Add Custom Token.'", |import-optimism-3|
 
 Breaking down the contract
 --------------------------
