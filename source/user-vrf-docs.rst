@@ -80,13 +80,16 @@ An example API request is as follows:
 
     curl -X POST "95.217.75.250:8080/request?api_key=abcdefg1234567&to_address=0x123456789deadbeef0123456789deadbeef01234&network=arbitrum-nitro-goerli"
 
-This would transfer 100 PRTL to address ``0x123456789deadbeef0123456789deadbeef01234`` on Arbitrum's Nitro Testnet, using the API key `abcdefg1234567`.
+This would transfer 100 PRTL to address ``0x123456789deadbeef0123456789deadbeef01234`` on Arbitrum's Nitro Testnet, using the API key ``abcdefg1234567``.
 
-Once the PRTL is sent, you can use a blockchain explorer to confirm that you recieved the token. 
+Once the PRTL is sent, you can use a blockchain explorer to confirm that you received the token. 
+
 - Arbitrum: https://goerli-rollup-explorer.arbitrum.io
+
 - Optimism: https://goerli-optimism.etherscan.io/
 
 In order to view these PRTL tokens, you'll need to import the PRTL token into MetaMask.
+
 .. |import-optimism-1| image:: ../images/import-optimism-1.png
 .. |import-optimism-2| image:: ../images/import-optimism-2.png
 .. |import-optimism-3| image:: ../images/import-optimism-3.png
@@ -94,11 +97,13 @@ In order to view these PRTL tokens, you'll need to import the PRTL token into Me
 .. csv-table::  
     :width: 100%
 
-    "| Navigate to MetaMask and locate the 'Import token' button
+    "| Navigate to MetaMask and locate the `Import tokens` button
     | on the buttom of the UI.", |import-optimism-1|
-    "| Enter the correct valices for each of the fields using . 
-    | the above information for the Token Contract Address.", |import-optimism-2|
-    "| Complete the import by clicking 'Add Custom Token.'", |import-optimism-3|
+    "| Enter the correct values depending on your network, using the 
+    | above chart for `Deployed Contract Addresses`.", |import-optimism-2|
+    "| Complete the import by clicking `Add Custom Token`.", |import-optimism-3|
+
+You should now be able to view your newly received PRTL tokens in MetaMask.
 
 Breaking down the contract
 --------------------------
