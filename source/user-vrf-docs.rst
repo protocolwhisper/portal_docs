@@ -1,5 +1,10 @@
 .. _developer_docs_vrf:
 
+.. image:: ../images/portal-logo.png
+	:width: 300px
+
+|
+
 VRF Developer Docs
 ==================
 
