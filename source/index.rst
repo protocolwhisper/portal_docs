@@ -30,7 +30,7 @@ Overview
 ---------------
 In the next section, we outline a technical tutorial and demo on how developers can use our smart contracts, currently running on EVM-compatible blockchains. The Verifiable Random Function (VRF) demo (`available on Remix <https://remix.ethereum.org/#url=https://github.com/PortalCompute/portal_docs/blob/main/sample_code/VRFClient.sol>`_) helps you to understand our architecture, request Testnet PRTL from our faucet, and start using our VRF service and smart contracts to power your Dapps. We will be releasing more heavy compute-oriented demos as we continue development. 
 
-Since we are building Portal from the ground up, feel free to regularly check for updates and follow us on `Twitter <https://twitter.com/portalcompute>`_ for the latest news about Portal.
+Since we are building Portal from the ground up, feel free to regularly check for updates and follow us on `Twitter <https://twitter.com/portalcompute>`_ for the latest news and visit Portal's `Website <https://www.portalcompute.com/>`_.
 
 
 
