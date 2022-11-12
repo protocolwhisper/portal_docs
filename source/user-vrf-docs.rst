@@ -182,6 +182,16 @@ The ``VRFClient`` contract provides a simple dice-rolling application that can e
 
 .. code-block:: javascript
 
+    interface IPRTLToken { //Interface of the PRTL Token
+	    function balanceOf(address tokenHolder) external view returns (uint256);
+
+	    function send(
+		address recipient,
+		uint256 amount,
+		bytes memory data
+	    ) external;
+    }
+
     contract VRFClient is VRFClientBase {
         address owner;
         uint256 public diceRoll;
@@ -190,12 +200,12 @@ The ``VRFClient`` contract provides a simple dice-rolling application that can e
 
         // For referencing VRFServiceOIC and PRTLToken contracts
         address VRFServiceOICAddress; 
-        PRTLToken PRTL;
+        IPRTLToken PRTL;
 
         constructor(address _VRFServiceOICAddress, address _PRTLTokenAddress) VRFClientBase() {
             owner = msg.sender;
             VRFServiceOICAddress = _VRFServiceOICAddress;
-            PRTL = PRTLToken(_PRTLTokenAddress);
+            PRTL = IPRTLToken(_PRTLTokenAddress);
         }
 
         // This function makes a VRF request to the VRFServiceOIC contract.
